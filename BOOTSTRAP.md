@@ -63,6 +63,19 @@ Create the following directories and files in `~/.config/opencode/templates/`:
 
 6. Empty markdown files: `PROJECT.md`, `PLAN.md`, `ARCHITECTURE.md`, `DECISIONS.md`.
 
+7. **`/btw` Command**: Create `~/.config/opencode/commands/btw.md` to allow side-questions:
+   ```markdown
+   ---
+   description: Ask a side question without interrupting the current agent or project state.
+   model: [PRO_MODEL]
+   ---
+   You are answering a quick side-question from the user. 
+   Do NOT modify any project state. Do NOT orchestrate any subagents. Do NOT update tasks.yaml.
+   
+   Simply answer the following question as helpfully and concisely as possible:
+   $ARGUMENTS
+   ```
+
 ### STEP 3: Generate the Primary Agents
 Create these in `~/.config/opencode/agents/`, inserting the **[PRO_MODEL]** you selected:
 
