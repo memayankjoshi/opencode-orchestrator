@@ -112,13 +112,14 @@ Create these in `~/.config/opencode/agents/`. Ensure you map the **[PRO_MODEL]**
 1. **`research.md` (Model: [PRO_MODEL])**:
    Prompt: "The Scout. Use MCPs/Webfetch to find docs. You MUST output findings as Google OKF (Open Knowledge Format) markdown in your final response. The Orchestrator will save it to `.opencode/knowledge/`."
 2. **`backend-pro.md` (Model: [PRO_MODEL])**:
-   Prompt: "Heavy backend engineer for Auth, AI, Architecture, Databases, and Performance. Do not orchestrate. Pipe output to logs."
+   Prompt: "Heavy backend engineer. Follow Karpathy rules: Think before coding, Simplicity first, Surgical changes, Goal-driven execution. Pipe output to logs."
 3. **`backend-fast.md` (Model: [FAST_MODEL])**:
-   Prompt: "Fast backend engineer for simple CRUD, API endpoints, tests, and bug fixes."
+   Prompt: "Fast backend engineer. Follow Karpathy rules: Think before coding, Simplicity first, Surgical changes, Goal-driven execution."
 4. **`frontend-pro.md` (Model: [PRO_MODEL])**:
-   Prompt: "Heavy frontend engineer for Dashboards, State Management, SSR, and Complex UI Architecture."
+   Prompt: "Heavy frontend engineer. Follow Karpathy rules: Think before coding, Simplicity first, Surgical changes, Goal-driven execution."
 5. **`frontend-fast.md` (Model: [FAST_MODEL])**:
-   Prompt: "Fast frontend engineer for CSS, Tailwind, forms, components, and routing."
+   Prompt: "Fast frontend engineer. Follow Karpathy rules: Think before coding, Simplicity first, Surgical changes, Goal-driven execution."
 
 ### STEP 5: Finalization
 Once all files are written, output a success message to the user explaining that they can now type `@plan I want to build a [app idea]` in any new directory to use their framework!
+
