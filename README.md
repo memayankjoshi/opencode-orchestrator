@@ -1,4 +1,4 @@
-﻿# OpenCode Solo Orchestrator
+﻿# OpenCode Orchestrator
 
 A lightweight, deterministic, and fiercely token-efficient Multi-Agent Orchestration Framework for [OpenCode](https://github.com/opencode-ai/opencode).
 
@@ -20,7 +20,7 @@ Because you probably have different models configured than I do (e.g. OpenAI vs 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/opencode-orchestrator.git
+   git clone https://github.com/memayankjoshi/opencode-orchestrator.git
    cd opencode-orchestrator
    ```
 
