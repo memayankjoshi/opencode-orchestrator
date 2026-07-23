@@ -63,7 +63,36 @@ Create the following directories and files in `~/.config/opencode/templates/`:
 
 6. Empty markdown files: `PROJECT.md`, `PLAN.md`, `ARCHITECTURE.md`, `DECISIONS.md`.
 
-7. **`/btw` Command**: Create `~/.config/opencode/commands/btw.md` to allow side-questions:
+8. **Global Preferences File**: Create `~/.config/opencode/PREFERENCES.md` with YAML frontmatter:
+   ```markdown
+   ---
+   type: Global Preferences
+   title: User Coding Style Preferences
+   tags: [learning, style]
+   ---
+   # User Preferences
+   (Automatically populated by /reflect command.)
+   ```
+
+9. **Update `opencode.json`**: Add `"~/.config/opencode/PREFERENCES.md"` to the `instructions` array so every agent reads your preferences automatically.
+
+7. **`/reflect` Command** (Task Observer): Create `~/.config/opencode/commands/reflect.md`:
+   ```markdown
+   ---
+   description: Analyse completed project and save coding style preferences globally.
+   ---
+   You are the Task Observer. Scan the project source code, identify stylistic patterns (indentation, naming, imports, component patterns, error handling), and append findings to `~/.config/opencode/PREFERENCES.md`. Do not modify project files.
+   ```
+
+8. **`/discover` Command**: Create `~/.config/opencode/commands/discover.md` for skills.sh integration:
+   ```markdown
+   ---
+   description: Search and install community skills from skills.sh registry by keyword.
+   ---
+   Search https://www.skills.sh/ for $ARGUMENTS, present top matches with install commands, and install on confirmation using `npx skills add <owner/repo>`.
+   ```
+
+9. **`/btw` Command**: Create `~/.config/opencode/commands/btw.md` to allow side-questions:
    ```markdown
    ---
    description: Ask a side question without interrupting the current agent or project state.
